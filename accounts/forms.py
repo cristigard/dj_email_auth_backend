@@ -8,7 +8,7 @@ from .models import CustomUser
 
 
 class CustomAuthenticationForm(AuthenticationForm):
-    username = forms.CharField(label = 'Email')
+    username = forms.EmailField(label = 'Email')
     error_messages = {
         'invalid_login': (
             "Please enter a correct Email and Password. Note that both "
