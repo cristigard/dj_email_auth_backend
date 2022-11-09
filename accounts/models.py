@@ -4,6 +4,6 @@ import uuid
 
 
 class CustomUser(AbstractUser):
-    email = models.EmailField('Email', unique=True)
+    email = models.EmailField(unique=True)
     # generate a unique username every time a user is registered
-    username = models.CharField(default=uuid.uuid4(), unique=True, max_length =255)
+    username = models.CharField(default=uuid.uuid4(), unique=True, max_length = 120)
